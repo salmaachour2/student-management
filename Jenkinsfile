@@ -9,6 +9,7 @@ pipeline {
     stages {
         stage('GIT') {
             steps {
+                credentialsId: 'git-cred'
                 git branch: 'main', url: 'https://github.com/salmaachour2/student-management'
             }
         }
